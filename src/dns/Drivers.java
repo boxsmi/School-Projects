@@ -6,13 +6,15 @@ package dns;
 public class Drivers {
     private String nameOfFile;
     private String pathToFile;
+    private double sizeOfFile;
 
     public Drivers() {
     }
 
-    public Drivers(String nameOfFile, String pathToFile) {
+    public Drivers(String nameOfFile, String pathToFile, double sizeOfFile) {
         this.nameOfFile = nameOfFile;
         this.pathToFile = pathToFile;
+        this.sizeOfFile = sizeOfFile;
     }
 
     public String getNameOfFile() {
@@ -31,11 +33,11 @@ public class Drivers {
         this.pathToFile = pathToFile;
     }
 
-    @Override
-    public String toString() {
-        return "Drivers{" +
-                "nameOfFile='" + nameOfFile + '\'' +
-                ", pathToFile='" + pathToFile + '\'' +
-                '}';
+    public double getSizeOfFile() {
+        return sizeOfFile;
+    }
+
+    public void setSizeOfFile(double sizeOfFile) {
+        this.sizeOfFile = sizeOfFile;
     }
 }

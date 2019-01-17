@@ -3,7 +3,6 @@ Created by Aleksandr
                     Smirnov*/
 package dns;
 
-import javax.xml.crypto.Data;
 import java.util.Date;
 
 public class Comments {
