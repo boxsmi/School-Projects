@@ -13,7 +13,7 @@ public class Tovar {
     private int currentPrice;
     private Photo littlePhoto;
     private Photo bigPhoto;
-    private About aboutProduct;
+    private String aboutProduct;
     private String countryOfMade;
     private String guarantee;
     private Photo[] dopPhoto = new Photo[10];
@@ -30,7 +30,7 @@ public class Tovar {
     public Tovar() {
     }
 
-    public Tovar(String mainName, String kodTovara, int lastPrice, int currentPrice, Photo littlePhoto, Photo bigPhoto, About aboutProduct, String countryOfMade, String guarantee, Photo[] dopPhoto, Video[] dopVideo, Characteristic[] characteristic, View[] view, Comments[] comments, Review[] review, QuestionAndAnswers[] questionAndAnswers, Drivers[] files, Tovar[] accesories, Shop[] shops) {
+    public Tovar(String mainName, String kodTovara, int lastPrice, int currentPrice, Photo littlePhoto, Photo bigPhoto, String aboutProduct, String countryOfMade, String guarantee, Photo[] dopPhoto, Video[] dopVideo, Characteristic[] characteristic, View[] view, Comments[] comments, Review[] review, QuestionAndAnswers[] questionAndAnswers, Drivers[] files, Tovar[] accesories, Shop[] shops) {
         this.mainName = mainName;
         this.kodTovara = kodTovara;
         this.lastPrice = lastPrice;
@@ -100,11 +100,11 @@ public class Tovar {
         this.bigPhoto = bigPhoto;
     }
 
-    public About getAboutProduct() {
+    public String getAboutProduct() {
         return aboutProduct;
     }
 
-    public void setAboutProduct(About aboutProduct) {
+    public void setAboutProduct(String aboutProduct) {
         this.aboutProduct = aboutProduct;
     }
 
