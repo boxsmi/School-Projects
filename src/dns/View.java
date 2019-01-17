@@ -4,13 +4,20 @@ Created by Aleksandr
 package dns;
 
 import java.util.Arrays;
+import java.util.Date;
 
 public class View {
 
     private String plus;
     private String minuse;
     private String comment;
-    private Photo[] photoView;
+    private Photo[] photoView = new Photo[10];
+    private String periodOfUse;
+    private int mark;
+    private int like;
+    private Date dateOfView;
+    private String citiOfBuy;
+    private Buyer buyer;
 
     public View() {
     }
