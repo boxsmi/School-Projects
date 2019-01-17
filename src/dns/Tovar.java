@@ -11,46 +11,37 @@ public class Tovar {
     private String kodTovara;
     private int lastPrice;
     private int currentPrice;
-    private double mark;
-    private double voices;
-    private boolean availability;
-    private String dopInfo;
-    private String dopGuarantee;
     private Photo littlePhoto;
     private Photo bigPhoto;
-    private Photo[] dopPhoto = new Photo[10];
-    private Video videoTovara;
     private About aboutProduct;
-    private Characteristic characteristic;
-    private View view;
-    private Comments comments;
-    private Review review;
-    private QuestionAndAnswers questionAndAnswers;
-    private Drivers files;
+    private String countryOfMade;
+    private String guarantee;
+    private Photo[] dopPhoto = new Photo[10];
+    private Video [] dopVideo = new Video[10];
+    private Characteristic [] characteristic = new Characteristic[30];
+    private View [] view = new View[1000];
+    private Comments [] comments = new Comments [1000];
+    private Review [] review = new Review[1000];
+    private QuestionAndAnswers [] questionAndAnswers = new QuestionAndAnswers[1000];
+    private Drivers [] files = new Drivers[10];
     private Tovar[] accesories = new Tovar[10];
+    private Shop [] shops = new Shop[50];
 
     public Tovar() {
     }
 
-    public Tovar(String mainName, String kodTovara, int lastPrice, int currentPrice, double mark, double voices,
-                 boolean availability, String dopInfo, String dopGuarantee, Photo littlePhoto, Photo bigPhoto,
-                 Photo[] dopPhoto, Video videoTovara, About aboutProduct, Characteristic characteristic,
-                 View view, Comments comments, Review review, QuestionAndAnswers questionAndAnswers,
-                 Drivers files, Tovar[] accesories) {
+    public Tovar(String mainName, String kodTovara, int lastPrice, int currentPrice, Photo littlePhoto, Photo bigPhoto, About aboutProduct, String countryOfMade, String guarantee, Photo[] dopPhoto, Video[] dopVideo, Characteristic[] characteristic, View[] view, Comments[] comments, Review[] review, QuestionAndAnswers[] questionAndAnswers, Drivers[] files, Tovar[] accesories, Shop[] shops) {
         this.mainName = mainName;
         this.kodTovara = kodTovara;
         this.lastPrice = lastPrice;
         this.currentPrice = currentPrice;
-        this.mark = mark;
-        this.voices = voices;
-        this.availability = availability;
-        this.dopInfo = dopInfo;
-        this.dopGuarantee = dopGuarantee;
         this.littlePhoto = littlePhoto;
         this.bigPhoto = bigPhoto;
-        this.dopPhoto = dopPhoto;
-        this.videoTovara = videoTovara;
         this.aboutProduct = aboutProduct;
+        this.countryOfMade = countryOfMade;
+        this.guarantee = guarantee;
+        this.dopPhoto = dopPhoto;
+        this.dopVideo = dopVideo;
         this.characteristic = characteristic;
         this.view = view;
         this.comments = comments;
@@ -58,6 +49,7 @@ public class Tovar {
         this.questionAndAnswers = questionAndAnswers;
         this.files = files;
         this.accesories = accesories;
+        this.shops = shops;
     }
 
     public String getMainName() {
@@ -92,46 +84,6 @@ public class Tovar {
         this.currentPrice = currentPrice;
     }
 
-    public double getMark() {
-        return mark;
-    }
-
-    public void setMark(double mark) {
-        this.mark = mark;
-    }
-
-    public double getVoices() {
-        return voices;
-    }
-
-    public void setVoices(double voices) {
-        this.voices = voices;
-    }
-
-    public boolean isAvailability() {
-        return availability;
-    }
-
-    public void setAvailability(boolean availability) {
-        this.availability = availability;
-    }
-
-    public String getDopInfo() {
-        return dopInfo;
-    }
-
-    public void setDopInfo(String dopInfo) {
-        this.dopInfo = dopInfo;
-    }
-
-    public String getDopGuarantee() {
-        return dopGuarantee;
-    }
-
-    public void setDopGuarantee(String dopGuarantee) {
-        this.dopGuarantee = dopGuarantee;
-    }
-
     public Photo getLittlePhoto() {
         return littlePhoto;
     }
@@ -148,26 +100,6 @@ public class Tovar {
         this.bigPhoto = bigPhoto;
     }
 
-    public Photo[] getDopPhoto() {
-        return dopPhoto;
-    }
-
-    public void addFototoDopPhotos(Photo photoToAdd) {
-        for (int i = 0; i < dopPhoto.length; i++) {
-            if (dopPhoto[i] == null)
-                dopPhoto[i] = photoToAdd;
-            break;
-        }
-    }
-
-    public Video getVideoTovara() {
-        return videoTovara;
-    }
-
-    public void setVideoTovara(Video videoTovara) {
-        this.videoTovara = videoTovara;
-    }
-
     public About getAboutProduct() {
         return aboutProduct;
     }
@@ -176,51 +108,80 @@ public class Tovar {
         this.aboutProduct = aboutProduct;
     }
 
-    public Characteristic getCharacteristic() {
+    public String getCountryOfMade() {
+        return countryOfMade;
+    }
+
+    public void setCountryOfMade(String countryOfMade) {
+        this.countryOfMade = countryOfMade;
+    }
+
+    public String getGuarantee() {
+        return guarantee;
+    }
+
+    public void setGuarantee(String guarantee) {
+        this.guarantee = guarantee;
+    }
+
+    public Photo[] getDopPhoto() {
+        return dopPhoto;
+    }
+
+
+    public Video[] getDopVideo() {
+        return dopVideo;
+    }
+
+    public void setDopVideo(Video[] dopVideo) {
+        this.dopVideo = dopVideo;
+    }
+
+    public Characteristic[] getCharacteristic() {
         return characteristic;
     }
 
-    public void setCharacteristic(Characteristic characteristic) {
+    public void setCharacteristic(Characteristic[] characteristic) {
         this.characteristic = characteristic;
     }
 
-    public View getView() {
+    public View[] getView() {
         return view;
     }
 
-    public void setView(View view) {
+    public void setView(View[] view) {
         this.view = view;
     }
 
-    public Comments getComments() {
+    public Comments[] getComments() {
         return comments;
     }
 
-    public void setComments(Comments comments) {
+    public void setComments(Comments[] comments) {
         this.comments = comments;
     }
 
-    public Review getReview() {
+    public Review[] getReview() {
         return review;
     }
 
-    public void setReview(Review review) {
+    public void setReview(Review[] review) {
         this.review = review;
     }
 
-    public QuestionAndAnswers getQuestionAndAnswers() {
+    public QuestionAndAnswers[] getQuestionAndAnswers() {
         return questionAndAnswers;
     }
 
-    public void setQuestionAndAnswers(QuestionAndAnswers questionAndAnswers) {
+    public void setQuestionAndAnswers(QuestionAndAnswers[] questionAndAnswers) {
         this.questionAndAnswers = questionAndAnswers;
     }
 
-    public Drivers getFiles() {
+    public Drivers[] getFiles() {
         return files;
     }
 
-    public void setFiles(Drivers files) {
+    public void setFiles(Drivers[] files) {
         this.files = files;
     }
 
@@ -232,31 +193,23 @@ public class Tovar {
         this.accesories = accesories;
     }
 
-    @Override
-    public String toString() {
-        return "Tovar{" +
-                "mainName='" + mainName + '\'' +
-                ", kodTovara='" + kodTovara + '\'' +
-                ", lastPrice=" + lastPrice +
-                ", currentPrice=" + currentPrice +
-                ", mark=" + mark +
-                ", voices=" + voices +
-                ", availability=" + availability +
-                ", dopInfo='" + dopInfo + '\'' +
-                ", dopGuarantee='" + dopGuarantee + '\'' +
-                ", littlePhoto=" + littlePhoto +
-                ", bigPhoto=" + bigPhoto +
-                ", dopPhoto=" + Arrays.toString(dopPhoto) +
-                ", videoTovara=" + videoTovara +
-                ", aboutProduct=" + aboutProduct +
-                ", characteristic=" + characteristic +
-                ", view=" + view +
-                ", comments=" + comments +
-                ", review=" + review +
-                ", questionAndAnswers=" + questionAndAnswers +
-                ", files=" + files +
-                '}';
+    public Shop[] getShops() {
+        return shops;
     }
+
+    public void setShops(Shop[] shops) {
+        this.shops = shops;
+    }
+
+    public void addFototoDopPhotos(Photo photoToAdd) {
+        for (int i = 0; i < dopPhoto.length; i++) {
+            if (dopPhoto[i] == null)
+                dopPhoto[i] = photoToAdd;
+            break;
+        }
+    }
+
+
 }
 
 
