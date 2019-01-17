@@ -17,15 +17,15 @@ public class Tovar {
     private String countryOfMade;
     private String guarantee;
     private Photo[] dopPhoto = new Photo[10];
-    private Video [] dopVideo = new Video[10];
-    private Characteristic [] characteristic = new Characteristic[30];
-    private View [] view = new View[1000];
-    private Comments [] comments = new Comments [1000];
-    private Review [] review = new Review[1000];
-    private QuestionAndAnswers [] questionAndAnswers = new QuestionAndAnswers[1000];
-    private Drivers [] files = new Drivers[10];
+    private Video[] dopVideo = new Video[10];
+    private Characteristic[] characteristic = new Characteristic[30];
+    private View[] view = new View[1000];
+    private Comments[] comments = new Comments[1000];
+    private Review[] review = new Review[1000];
+    private QuestionAndAnswers[] questionAndAnswers = new QuestionAndAnswers[1000];
+    private Drivers[] files = new Drivers[10];
     private Tovar[] accesories = new Tovar[10];
-    private Shop [] shops = new Shop[50];
+    private Shop[] shops = new Shop[50];
 
     public Tovar() {
     }
@@ -209,7 +209,45 @@ public class Tovar {
         }
     }
 
+    public void addVideoToDopVideo(Video videoToAdd) {
+        for (int i = 0; i < dopVideo.length; i++) {
+            if (dopVideo[i] == null)
+                dopVideo[i] = videoToAdd;
+            break;
+        }
+    }
+
+    public void addNewView(View viewToAdd) {
+        for (int i = 0; i < view.length; i++) {
+            if (view[i] == null)
+                view[i] = viewToAdd;
+            break;
+        }
+    }
+
+    public void addNewComment(Comments commentToAdd) {
+        for (int i = 0; i < comments.length; i++) {
+            if (comments[i] == null)
+                comments[i] = commentToAdd;
+            break;
+        }
+    }
+
+    public void addNewReview(Review reviewToAdd) {
+        for (int i = 0; i < review.length; i++) {
+            if (review[i] == null)
+                review[i] = reviewToAdd;
+            break;
+        }
+    }
+
+    public void addNewQuestion(QuestionAndAnswers questionToAdd) {
+        for (int i = 0; i < questionAndAnswers.length; i++) {
+            if (questionAndAnswers[i] == null)
+                questionAndAnswers[i] = questionToAdd;
+            break;
+        }
+    }
 
 }
-
 
