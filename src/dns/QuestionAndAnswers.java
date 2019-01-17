@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class QuestionAndAnswers {
 
-    private String [] themeOfQuestion;
+    private String[] themeOfQuestion;
     private String question;
     private String authorOfQuestion;
     private String emailauthorOfQuestion;
