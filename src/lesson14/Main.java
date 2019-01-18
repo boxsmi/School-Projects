@@ -11,6 +11,5 @@ public class Main {
         } catch (CurrentAgeException e) {
             System.out.println(e.getMessage());
         }
-        System.out.println("dfvdf");
     }
 }
