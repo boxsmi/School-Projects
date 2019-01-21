@@ -28,11 +28,26 @@ public class StringUtilsImpl implements StringUtils {
 
     @Override
     public int[] findWord(String text, String word) throws NullPointerException {
-        return new int[0];
+        if (text == null || word == null) {
+            throw new NullPointerException("Text == null || Word == null");
+        }
+        int mass[] = new int[5];
+        int index = 0;
+        int indexOfMas = 0;
+        while (index < text.length()) {
+            index = text.indexOf(word, index+1);
+            if(index == -1)
+                break;
+            mass[indexOfMas] = index;
+            indexOfMas++;
+        }
+        return mass;
     }
+
 
     @Override
     public double[] findNumbers(String text) throws CustomException {
+
         return new double[0];
     }
 }
