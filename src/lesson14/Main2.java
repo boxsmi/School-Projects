@@ -23,4 +23,5 @@ public class Main2 {
         System.out.println(fraction);
         fraction.setDivisor(0);
     }
+
 }
