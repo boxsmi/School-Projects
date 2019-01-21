@@ -51,4 +51,5 @@ public class FractionNumberImpl implements FractionNumber {
     public String toString() {
         return dividend + "/" + divisor;
     }
+
 }
