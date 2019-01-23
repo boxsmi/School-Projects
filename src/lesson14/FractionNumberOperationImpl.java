@@ -47,6 +47,7 @@ public class FractionNumberOperationImpl implements FractionNumberOperation {
         try {
             int divisor = a.getDivisor() * b.getDividend();
             c.setDivisor(divisor);
+
         } catch (ArithmeticException ex) {
             System.out.println("Divisor is 0!!!");
         }
