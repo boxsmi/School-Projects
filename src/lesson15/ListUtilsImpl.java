@@ -24,6 +24,9 @@ public class ListUtilsImpl implements ListUtils {
 
     @Override
     public List<Double> sortedList(List<Double> data) throws IllegalArgumentException {
+        if (data==null)
+            throw new IllegalArgumentException("No data!!!");
+
         return null;
     }
 }
