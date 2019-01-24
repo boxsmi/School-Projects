@@ -96,6 +96,8 @@ public class Moneta implements Comparable<Moneta> {
         if (stars1!=stars2)
             return stars1-stars2;
 
+
+
         return this.getMaterial().compareTo(o.getMaterial());
     }
 
