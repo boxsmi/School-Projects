@@ -6,6 +6,8 @@ package lesson15;
 import Interfaces.ListUtils;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ListUtilsImpl implements ListUtils {
@@ -24,9 +26,17 @@ public class ListUtilsImpl implements ListUtils {
 
     @Override
     public List<Double> sortedList(List<Double> data) throws IllegalArgumentException {
-        if (data==null)
+        if (data == null)
             throw new IllegalArgumentException("No data!!!");
-
-        return null;
+        List<Double> newSortedList = data;
+        Collections.sort(newSortedList, new Comparator<Double>() {
+            @Override
+            public int compare(Double o1, Double o2) {
+                return o2.compareTo(o1);
+            }
+        });
+        return newSortedList;
     }
+
+
 }
