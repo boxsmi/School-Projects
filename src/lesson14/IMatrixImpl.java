@@ -126,9 +126,14 @@ public class IMatrixImpl implements IMatrix {
     }
 
     @Override
-    public double determinant() {
+    public double determinant(double[][] matrix) {
         return 0;
     }
+
+//    @Override
+//    public double determinant() {
+//        return 0;
+//    }
 
     @Override
     public boolean isNullMatrix() {

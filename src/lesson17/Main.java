@@ -3,7 +3,11 @@
                                 */
 package lesson17;
 
+import org.apache.log4j.Logger;
+
 public class Main {
+    private static final Logger logger = Logger.getLogger(Main.class);
+
     public static void main(String[] args) {
         Raiting raiting = new Raiting();
         raiting.addPoint("Арсенал", 5);
@@ -16,5 +20,7 @@ public class Main {
         raiting.printBest();
         System.out.println("-----------");
         raiting.sortRaiting();
+
+        logger.error("Hello World!!!");
     }
 }
