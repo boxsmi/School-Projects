@@ -6,6 +6,7 @@ package lesson17;
 import java.util.*;
 
 public class Raiting {
+
     private HashMap<String, Integer> raiting = new HashMap<>();
 
     public Raiting() {

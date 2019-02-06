@@ -30,32 +30,42 @@ public class Main {
         Product kasha = new Product(10,"Kasha",8);
 
         checks.put(ivan,moloko);
-        checks.put(ivan,vodka);
-        checks.put(ivan,sirop);
+        checks.put(ivan,moloko);
+        checks.put(ivan,moloko);
+        checks.put(ivan,moloko);
+        checks.put(ivan,moloko);
+//        checks.put(ivan,vodka);
+//        checks.put(ivan,sirop);
 
         checks.put(dima,sirop);
-        checks.put(dima,semki);
-        checks.put(dima,vodka);
-        checks.put(dima,ikra);
-        checks.put(dima,kasha);
+        checks.put(dima,sirop);
+        checks.put(dima,sirop);
+//        checks.put(dima,semki);
+//        checks.put(dima,vodka);
+//        checks.put(dima,ikra);
+//        checks.put(dima,kasha);
 
-        checks.put(petya,moloko);
-        checks.put(petya,hleb);
-        checks.put(petya,semki);
-        checks.put(petya,ikra);
-        checks.put(petya,gin);
-        checks.put(petya,vodka);
-        checks.put(petya,sosiski);
+//        checks.put(petya,moloko);
+//        checks.put(petya,hleb);
+//        checks.put(petya,semki);
+//        checks.put(petya,ikra);
+//        checks.put(petya,gin);
+//        checks.put(petya,vodka);
+//        checks.put(petya,sosiski);
+        checks.put(petya,pivo);
+        checks.put(petya,pivo);
+        checks.put(petya,pivo);
+        checks.put(petya,pivo);
         checks.put(petya,pivo);
 
         System.out.println(checks.size());
         System.out.println(checks.countValues(petya));
-
+        System.out.println("--------------");
         for(Iterator<Product> productIterator = checks.valuesIterator(petya); productIterator.hasNext();)
         {
             System.out.println(productIterator.next());
         }
-
+        System.out.println("--------------");
         Collection<Product> products = checks.values();
         for(Product product:products){
             System.out.println(product);
@@ -71,10 +81,14 @@ public class Main {
         check2.put(petya,gin);
         check2.put(petya,vodka);
 
-        checks.putAll(check2);
-        Collection<Product> products2 = checks.values();
+        check2.putAll(checks);
+
+        Collection<Product> products2 = check2.values();
         for(Product temp : products2){
             System.out.println(temp);
         }
+
+        System.out.println(check2.containsKey(dima));
+        System.out.println(check2.containsValue(sirop));
     }
 }

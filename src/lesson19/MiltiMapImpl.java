@@ -33,11 +33,24 @@ public class MiltiMapImpl<K, V> implements MultiMap<K, V> {
 
     @Override
     public boolean containsKey(Object key) {
+        Set<K> keys = multiMap.keySet();
+        for (K temp : keys) {
+            if (keys.contains(key))
+                return true;
+        }
         return false;
     }
 
     @Override
     public boolean containsValue(Object value) {
+        ArrayList<V> allValues = new ArrayList<>();
+        Set<K> keys = multiMap.keySet();
+        for (K key : keys) {
+            List<V> values = multiMap.get(key);
+            allValues.addAll(values);
+            if (allValues.contains(value))
+                return true;
+        }
         return false;
     }
 
@@ -87,7 +100,7 @@ public class MiltiMapImpl<K, V> implements MultiMap<K, V> {
             } else {
                 ArrayList<V> values = new ArrayList<>();
                 values.add(m.get(key));
-                multiMap.put(key,values);
+                multiMap.put(key, values);
             }
         }
     }
