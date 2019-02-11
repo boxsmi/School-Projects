@@ -90,5 +90,6 @@ public class Main {
 
         System.out.println(check2.containsKey(dima));
         System.out.println(check2.containsValue(sirop));
+        System.out.println(check2.get(petya));
     }
 }

@@ -93,7 +93,13 @@ public class MiltiMapImpl<K, V> implements MultiMap<K, V> {
 
     @Override
     public V remove(Object key) {
-        return null;
+        if (multiMap.containsKey(key)) {
+            List<V> values = multiMap.get(key);
+            values.clear();
+            return values.get(0);
+        } else {
+            return null;
+        }
     }
 
     @Override
@@ -113,7 +119,7 @@ public class MiltiMapImpl<K, V> implements MultiMap<K, V> {
 
     @Override
     public void clear() {
-
+        multiMap.clear();
     }
 
     @Override

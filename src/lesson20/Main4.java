@@ -5,6 +5,8 @@ package lesson20;
 
 import Interfaces.FileCopyFailedException;
 
+import java.io.IOException;
+
 public class Main4 {
     public static void main(String[] args) {
         FileCopyWithOneByte files = new FileCopyWithOneByte();
@@ -14,6 +16,27 @@ public class Main4 {
             System.out.println(e.getMessage());
         }
 
+        FileCopyImpl fileCopy = new FileCopyImpl("D:\\New profile\\11.jpg","D:\\New profile\\42.jpg");
+        try {
+            fileCopy.createChannelsFileCopyUtils();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            fileCopy.createBufferedFileCopyUtils();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        FileCopyImpl fileCopy2 = new FileCopyImpl("D:\\New profile\\11.jpg","D:\\New profile\\455.jpg");
+
+        fileCopy2.createJava7CopyUtils();
+
+        FileCopyImpl fileCopy3 = new FileCopyImpl("D:\\New profile\\11.jpg","D:\\New profile\\555.jpg");
+
+        fileCopy3.createSimpleFileCopyUtils();
 
     }
 }
