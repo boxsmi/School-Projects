@@ -10,10 +10,10 @@ public class Main3 {
     public static void main(String[] args) {
         File diskC = new File("C:\\");
         System.out.println(diskC.isDirectory());
-//        System.out.println(diskC.toString());
-//        System.out.println(diskC.exists());
-//        if(!diskC.exists())
-//            diskC.mkdir();
+        System.out.println(diskC.toString());
+        System.out.println(diskC.exists());
+        if(!diskC.exists())
+            diskC.mkdir();
 //            diskC.delete();
         File[] files = diskC.listFiles(new FileFilter() {
             @Override

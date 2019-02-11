@@ -5,6 +5,7 @@ package lesson20;
 
 import Interfaces.FileCopyFailedException;
 
+import java.io.File;
 import java.io.IOException;
 
 public class Main4 {
@@ -30,13 +31,14 @@ public class Main4 {
         }
 
 
-        FileCopyImpl fileCopy2 = new FileCopyImpl("D:\\New profile\\11.jpg","D:\\New profile\\455.jpg");
-
-        fileCopy2.createJava7CopyUtils();
-
-        FileCopyImpl fileCopy3 = new FileCopyImpl("D:\\New profile\\11.jpg","D:\\New profile\\555.jpg");
-
-        fileCopy3.createSimpleFileCopyUtils();
+       DirectoryCopy dir = new DirectoryCopy();
+        File source = new File("D:\\Intel");
+        File destin = new File("D:\\IntelCopy");
+        try {
+            dir.copyDir(source,destin);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 }
