@@ -6,13 +6,25 @@ package lesson20;
 import Interfaces.IOUtils;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 
 public class IOUtilsImpl implements IOUtils {
     @Override
     public void replaceChars(Reader in, Writer out, String inChars, String outChars) throws NullPointerException, IllegalArgumentException {
-
+        try {
+            while (true) {
+                char ch = (char) in.read();
+                int index = inChars.indexOf(ch);
+                if (index != -1) {
+                    ch = outChars.charAt(index);
+                }
+                out.write(ch);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
