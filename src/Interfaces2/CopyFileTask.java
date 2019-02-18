@@ -1,6 +1,7 @@
 package Interfaces2;
 
 
+import Interfaces.FileCopyUtils;
 import lesson20.FileCopyImpl;
 
 /**
@@ -15,6 +16,6 @@ public interface CopyFileTask extends Task {
 	 * 
 	 * @param copyUtils алгоритм копирования файлов
 	 */
-	void setFileCopyUtils(FileCopyImpl copyUtils);
+	void setFileCopyUtils(FileCopyUtils copyUtils);
 
 }
