@@ -1,5 +1,7 @@
 package Interfaces2;
 
+import Interfaces.FileCopyFailedException;
+
 /**
  * Интерфейс абстрактной задачи. 
  * 
@@ -25,5 +27,5 @@ public interface Task {
 	 * 
 	 * @throws TaskExecutionFailedException если задача не была выполнена корректно
 	 */
-	void execute() throws TaskExecutionFailedException;
+	void execute() throws TaskExecutionFailedException, FileCopyFailedException;
 }

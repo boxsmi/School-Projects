@@ -26,7 +26,6 @@ public class FileCopyWithChannels implements FileCopyUtils {
             destinationChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
 
         } catch (IOException e) {
-            e.printStackTrace();
             throw new FileCopyFailedException(e.getMessage());
 
         } finally {

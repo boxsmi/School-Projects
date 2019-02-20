@@ -16,6 +16,8 @@ public class FileCopyImpl implements FileCopyTestUtils {
     private String source;
     private String destination;
 
+    public FileCopyImpl(){}
+
     public FileCopyImpl(String source, String destination) {
         this.source = source;
         this.destination = destination;

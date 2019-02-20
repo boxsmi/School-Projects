@@ -23,7 +23,7 @@ public class FileCopyWithJava7CopyUtils implements FileCopyUtils {
         try {
             Files.copy(sour, dest);
         } catch (IOException e) {
-            e.printStackTrace();
+
             throw new FileCopyFailedException(e.getMessage());
         }
     }

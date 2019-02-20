@@ -12,7 +12,7 @@ public abstract class TaskImpl implements Task {
 
     @Override
     public int getTryCount() {
-        return 0;
+        return countTry;
     }
 
     @Override

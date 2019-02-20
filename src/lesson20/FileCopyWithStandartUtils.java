@@ -24,7 +24,6 @@ public class FileCopyWithStandartUtils implements FileCopyUtils {
             sour.read(buffer, 0, buffer.length);
             dest.write(buffer, 0, buffer.length);
         } catch (IOException e) {
-            e.printStackTrace();
             throw new FileCopyFailedException(e.getMessage());
         }
     }

@@ -30,7 +30,6 @@ public class FileCopyWithOneByte implements FileCopyUtils {
             bos.flush(); //освобождаем буфер (принудительно записываем содержимое буфера в файл)
             bos.close(); //закрываем поток записи (обязательно!)
         } catch (java.io.IOException e) {
-            System.out.println(e.toString());
             throw new FileCopyFailedException(e.getMessage());
         }
     }
